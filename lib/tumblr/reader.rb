@@ -183,6 +183,7 @@ class Tumblr
     def self.build_audio(post)
       post_id = post['id']
       audio = Tumblr::Post::Audio.new(post_id)
+      audio.embed = post['audio_player']
       audio.caption = post['audio_caption']
       audio 
     end
