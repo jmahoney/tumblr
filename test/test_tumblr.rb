@@ -705,6 +705,12 @@ link
         audio.caption = 'not pirated'
         assert_equal 'not pirated', audio.caption
       end
+      
+      test 'has an optional embedded audio player' do
+        audio = Tumblr::Post::Audio.new
+        audio.embed = '<embed></embed>'
+        assert_equal '<embed></embed>', audio.embed
+      end
     end
   end
 end
