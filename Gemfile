@@ -7,6 +7,7 @@ group :test do
 	gem 'rake'
 	gem 'redgreen'
 	gem 'contest'
-	gem 'vcr', '>= 0.3.1'
+	gem 'vcr', '>= 1.9.0'
 	gem 'jeweler'
+        gem 'fakeweb'
 end

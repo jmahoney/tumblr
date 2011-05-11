@@ -1,8 +1,41 @@
 --- 
-- !ruby/struct:VCR::RecordedResponse 
-  method: :get
-  uri: http://mwunsch.tumblr.com:80/api/read/
-  response: !ruby/object:Net::HTTPOK 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://mwunsch.tumblr.com:80/api/read/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      last-modified: 
+      - Fri, 05 Mar 2010 17:12:57 GMT
+      p3p: 
+      - CP="ALL ADM DEV PSAi COM OUR OTRo STP IND ONL"
+      content-type: 
+      - text/xml; charset=UTF-8
+      connection: 
+      - close
+      x-tumblr-usec: 
+      - D=23522
+      x-robots-tag: 
+      - noindex
+      server: 
+      - Apache/2.2.3 (CentOS)
+      date: 
+      - Sat, 06 Mar 2010 12:06:17 GMT
+      x-cache-auto: 
+      - hit
+      content-length: 
+      - "29274"
+      x-tumblr-perf: 
+      - "\"ch:4/tumblelog_id_for_host,tumblelogs,country_code_for_ip,auto cm:3/rate-limiter,rate-limiter,rate-limiter ce:0/ c:0/0 d:0/0 e:0/0 auto-hit\""
+      vary: 
+      - Accept-Encoding
+      cache-control: 
+      - max-age=900
     body: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\
       <tumblr version=\"1.0\"><tumblelog name=\"mwunsch\" timezone=\"US/Eastern\" title=\"M. Wunsch\">Collected visual and aural interests of &lt;a href=\"http://markwunsch.com\" rel=\"me\"&gt;Mark Wunsch&lt;/a&gt;.</tumblelog><posts start=\"0\" total=\"66\"><post id=\"428536701\" url=\"http://mwunsch.tumblr.com/post/428536701\" url-with-slug=\"http://mwunsch.tumblr.com/post/428536701/but-for-me-im-going-to-stop-thinking-in-terms-of\" type=\"quote\" date-gmt=\"2010-03-05 17:12:57 GMT\" date=\"Fri, 05 Mar 2010 12:12:57\" unix-timestamp=\"1267809177\" format=\"markdown\" reblog-key=\"OMh0FPCk\" slug=\"but-for-me-im-going-to-stop-thinking-in-terms-of\"><quote-text>But for me, I\xE2\x80\x99m going to stop thinking in terms of products and start releasing projects. I don\xE2\x80\x99t want to be limited by thinking, \xE2\x80\x9Cis there a market for this idea.\xE2\x80\x9D From here on out, success for a project means at least one person is \xE2\x80\x9Cwatching\xE2\x80\x9D it on github.</quote-text><quote-source>&lt;a href=\"http://ted-is-a-nerd.tumblr.com/post/428529777/i-quit-or-its-open-source-from-now-on\" class=\"tumblr_blog\"&gt;I Quit, or It&amp;#8217;s Open Source from now on!&lt;/a&gt; by &lt;a href=\"http://ted-is-a-nerd.tumblr.com/\"&gt;Nerdy Ted Roden&lt;/a&gt;</quote-source></post><post id=\"424706712\" url=\"http://mwunsch.tumblr.com/post/424706712\" url-with-slug=\"http://mwunsch.tumblr.com/post/424706712/world-geodetic-system\" type=\"link\" date-gmt=\"2010-03-03 20:55:36 GMT\" date=\"Wed, 03 Mar 2010 15:55:36\" unix-timestamp=\"1267649736\" format=\"markdown\" reblog-key=\"hoqItOHh\" slug=\"world-geodetic-system\" bookmarklet=\"true\"><link-text>World Geodetic System</link-text><link-url>http://en.wikipedia.org/wiki/World_Geodetic_System</link-url><link-description>&lt;p&gt;What I&amp;#8217;m looking at on Wikipedia, right now.&lt;/p&gt;\n\n\
       &lt;blockquote&gt;\n  &lt;p&gt;The &lt;strong&gt;World Geodetic System&lt;/strong&gt; is a standard for use in cartography, geodesy, and navigation. It comprises a standard coordinate frame for the Earth, a standard spheroidal reference surface&amp;#8230;for raw altitude data, and a gravitational equipotential surface&amp;#8230;that defines the nominal sea level.&lt;/p&gt;\n\
@@ -66,36 +99,4 @@
       &lt;blockquote&gt;\n  &lt;p&gt;Here is where I make a Big Point. What we &lt;i&gt;want&lt;/i&gt; from our technology, in its most elemental form, is to make our thoughts happen. Sure, it\xE2\x80\x99s still very much sci-fi in 2010, but what every calculating machine and telephone and computer and phonograph and light bulb and hammer and every tool ever invented is about at its core is our desire, our evolutionary imperative to control our environment at our will. And we\xE2\x80\x99re getting closer and closer to that happening. But there are still many layers between our intentions and our environment. As time progresses, we will strip away those layers one by one. And it\xE2\x80\x99s &lt;i&gt;always&lt;/i&gt; disruptive to do so. The reason that any manufacturer of technology exists is to ease each step of the process of tearing away the layers of abstraction between our thoughts and our realities.&lt;/p&gt;\n\
       &lt;/blockquote&gt;\n\n\
       &lt;p&gt;Mr. Lisagor crawls into my brain, and steals my thoughts on the iPad.&lt;/p&gt;</regular-body></post><post id=\"374263788\" url=\"http://mwunsch.tumblr.com/post/374263788\" url-with-slug=\"http://mwunsch.tumblr.com/post/374263788/any-sufficiently-advanced-technology-is\" type=\"quote\" date-gmt=\"2010-02-06 15:59:57 GMT\" date=\"Sat, 06 Feb 2010 10:59:57\" unix-timestamp=\"1265471997\" format=\"markdown\" reblog-key=\"P0rwoDlH\" slug=\"any-sufficiently-advanced-technology-is\"><quote-text>Any sufficiently advanced technology is indistinguishable from magic.</quote-text><quote-source>&lt;a href=\"http://en.wikipedia.org/wiki/Clarke's_three_laws\"&gt;Arthur C. Clark&amp;#8217;s third law of prediction&lt;/a&gt;</quote-source></post></posts></tumblr>\n"
-    body_exist: true
-    code: "200"
-    header: 
-      last-modified: 
-      - Fri, 05 Mar 2010 17:12:57 GMT
-      p3p: 
-      - CP="ALL ADM DEV PSAi COM OUR OTRo STP IND ONL"
-      content-type: 
-      - text/xml; charset=UTF-8
-      connection: 
-      - close
-      x-tumblr-usec: 
-      - D=23522
-      x-robots-tag: 
-      - noindex
-      server: 
-      - Apache/2.2.3 (CentOS)
-      date: 
-      - Sat, 06 Mar 2010 12:06:17 GMT
-      x-cache-auto: 
-      - hit
-      content-length: 
-      - "29274"
-      x-tumblr-perf: 
-      - "\"ch:4/tumblelog_id_for_host,tumblelogs,country_code_for_ip,auto cm:3/rate-limiter,rate-limiter,rate-limiter ce:0/ c:0/0 d:0/0 e:0/0 auto-hit\""
-      vary: 
-      - Accept-Encoding
-      cache-control: 
-      - max-age=900
     http_version: "1.1"
-    message: OK
-    read: true
-    socket: 

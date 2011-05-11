@@ -1,15 +1,15 @@
 --- 
-- !ruby/struct:VCR::RecordedResponse 
-  method: :get
-  uri: http://tumblrgemtest.tumblr.com:80/api/read/
-  response: !ruby/object:Net::HTTPOK 
-    body: |
-      <?xml version="1.0" encoding="UTF-8"?>
-      <tumblr version="1.0"><tumblelog name="tumblrgemtest" timezone="US/Eastern" title="Testing Tumblr Gem"></tumblelog><posts start="0" total="1"><post id="445597771" url="http://tumblrgemtest.tumblr.com/post/445597771" url-with-slug="http://tumblrgemtest.tumblr.com/post/445597771/simple-post-to-check-liking-unliking" type="regular" date-gmt="2010-03-13 16:16:00 GMT" date="Sat, 13 Mar 2010 11:16:00" unix-timestamp="1268496960" format="markdown" reblog-key="DLVWOpfh" slug="simple-post-to-check-liking-unliking"><regular-body>&lt;p&gt;Simple post to check liking/unliking.&lt;/p&gt;</regular-body></post></posts></tumblr>
-
-    body_exist: true
-    code: "200"
-    header: 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://tumblrgemtest.tumblr.com:80/api/read/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
       last-modified: 
       - Sat, 13 Mar 2010 16:16:00 GMT
       p3p: 
@@ -36,7 +36,8 @@
       - Accept-Encoding
       cache-control: 
       - max-age=900
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <tumblr version="1.0"><tumblelog name="tumblrgemtest" timezone="US/Eastern" title="Testing Tumblr Gem"></tumblelog><posts start="0" total="1"><post id="445597771" url="http://tumblrgemtest.tumblr.com/post/445597771" url-with-slug="http://tumblrgemtest.tumblr.com/post/445597771/simple-post-to-check-liking-unliking" type="regular" date-gmt="2010-03-13 16:16:00 GMT" date="Sat, 13 Mar 2010 11:16:00" unix-timestamp="1268496960" format="markdown" reblog-key="DLVWOpfh" slug="simple-post-to-check-liking-unliking"><regular-body>&lt;p&gt;Simple post to check liking/unliking.&lt;/p&gt;</regular-body></post></posts></tumblr>
+
     http_version: "1.1"
-    message: OK
-    read: true
-    socket: 

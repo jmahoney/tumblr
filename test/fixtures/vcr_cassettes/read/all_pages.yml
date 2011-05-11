@@ -1,15 +1,15 @@
 --- 
-- !ruby/struct:VCR::RecordedResponse 
-  method: :post
-  uri: http://tumblrgemtest.tumblr.com:80/api/pages
-  response: !ruby/object:Net::HTTPOK 
-    body: |
-      <?xml version="1.0" encoding="UTF-8"?>
-      <tumblr version="1.0"><pages><page url="http://tumblrgemtest.tumblr.com/test1" render-in-theme="true" title="Page Test 1" link-title="Page Test 1">Test #1</page><page url="http://tumblrgemtest.tumblr.com/test2" render-in-theme="true" title="Page Test 2">Whatsup</page></pages></tumblr>
-
-    body_exist: true
-    code: "200"
-    header: 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://tumblrgemtest.tumblr.com:80/api/pages
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
       p3p: 
       - CP="ALL ADM DEV PSAi COM OUR OTRo STP IND ONL"
       content-type: 
@@ -28,7 +28,8 @@
       - "\"ch:0/ cm:0/ ce:0/ c:0/0 d:0/0 e:0/0\""
       vary: 
       - Accept-Encoding
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <tumblr version="1.0"><pages><page url="http://tumblrgemtest.tumblr.com/test1" render-in-theme="true" title="Page Test 1" link-title="Page Test 1">Test #1</page><page url="http://tumblrgemtest.tumblr.com/test2" render-in-theme="true" title="Page Test 2">Whatsup</page></pages></tumblr>
+
     http_version: "1.1"
-    message: OK
-    read: true
-    socket: 
