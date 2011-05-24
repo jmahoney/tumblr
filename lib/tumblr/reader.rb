@@ -185,6 +185,11 @@ class Tumblr
       audio = Tumblr::Post::Audio.new(post_id)
       audio.embed = post['audio_player']
       audio.caption = post['audio_caption']
+      audio.artist = post['id3_artist']
+      audio.album = post['id3_album']
+      audio.year = post['id3_year']
+      audio.track = post['id3_track']
+      audio.title = post['id3_title']
       audio 
     end
   

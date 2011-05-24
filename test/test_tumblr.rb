@@ -713,6 +713,20 @@ link
         audio.embed = '<embed></embed>'
         assert_equal '<embed></embed>', audio.embed
       end
+      
+      test 'has optional artist track year title data' do
+        audio = Tumblr::Post::Audio.new
+        audio.artist = 'Artist Name'
+        assert_equal 'Artist Name', audio.artist
+        audio.album = 'Album Name'
+        assert_equal = "Album Name", audio.album
+        audio.year = '2011'
+        assert_equal '2011', audio.year
+        audio.track = '1'
+        assert_equal '1', audio.track
+        audio.title = 'Audio Title'
+        assert_equal 'Audio Title', audio.title
+      end
     end
   end
 end

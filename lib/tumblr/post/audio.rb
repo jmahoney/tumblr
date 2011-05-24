@@ -9,7 +9,8 @@ class Tumblr
         @type = :audio
       end
       
-      parameters :externally_hosted_url, :caption, :embed
+      parameters :externally_hosted_url, :caption, :embed, 
+                 :artist, :album, :year, :track, :title
             
     end
   end
