@@ -3,16 +3,17 @@ GEM
   specs:
     contest (0.1.3)
     crack (0.1.8)
+    fakeweb (1.3.0)
     git (1.2.5)
-    highline (1.6.2)
+    highline (1.6.1)
     jeweler (1.6.0)
       bundler (~> 1.0.0)
       git (>= 1.2.5)
       rake
     oauth (0.4.4)
-    rake (0.9.0)
+    rake (0.8.7)
     redgreen (1.2.2)
-    vcr (1.10.0)
+    vcr (1.9.0)
     weary (0.7.2)
       crack (>= 0.1.7)
       oauth (>= 0.3.5)
@@ -22,9 +23,10 @@ PLATFORMS
 
 DEPENDENCIES
   contest
+  fakeweb
   highline (>= 1.5.2)
   jeweler
   rake
   redgreen
-  vcr (>= 0.3.1)
+  vcr (>= 1.9.0)
   weary (>= 0.7.1)

@@ -127,6 +127,8 @@ class Tumblr
           build_video(post)
         when :audio
           build_audio(post)
+        when :answer
+          build_answer(post)
         else
           raise "#{post_type} is not a recognized Tumblr post type."
       end
@@ -193,5 +195,12 @@ class Tumblr
       audio 
     end
   
+    def self.build_answer(post)
+      post_id = post['id']
+      answer = Tumblr::Post::Answer.new(post_id)
+      answer.question = post['question']
+      answer.answer = post['answer'] 
+      answer
+    end
   end
 end

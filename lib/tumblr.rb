@@ -112,6 +112,8 @@ class Tumblr
         Post::Video
       when :audio
         Post::Audio
+      when :answer
+        Post::Answer
       else
         raise "#{key} is not an understood Tumblr post type"
     end
