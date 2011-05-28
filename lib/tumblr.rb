@@ -83,8 +83,8 @@ class Tumblr
   
   # Guess the Type of Post for a given documents
   def self.infer_post_type(doc)
-    begin
-      url = URI.parse(doc)
+    begin      
+      url = URI.parse(URI.extract(doc).first)
       if url.is_a?(URI::HTTP)
         (url.host.include?('youtube.com') || url.host.include?('vimeo.com')) ? :video : :link
       else
