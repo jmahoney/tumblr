@@ -10,7 +10,8 @@ class Tumblr
       end
       
       parameters :externally_hosted_url, :caption, :embed, 
-                 :artist, :album, :year, :track, :title
+                 :artist, :album, :year, :track, :title,
+                 :download_url
             
     end
   end

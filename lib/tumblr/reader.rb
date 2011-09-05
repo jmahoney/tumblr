@@ -192,6 +192,7 @@ class Tumblr
       audio.year = post['id3_year']
       audio.track = post['id3_track']
       audio.title = post['id3_title']
+      audio.download_url = post['download-url']
       audio 
     end
   

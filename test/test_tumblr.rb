@@ -726,6 +726,8 @@ link
         assert_equal '1', audio.track
         audio.title = 'Audio Title'
         assert_equal 'Audio Title', audio.title
+        audio.download_url = 'http://foo.com/foo.mp3'
+        assert_equal 'http://foo.com/foo.mp3', audio.download_url
       end
     end
   end
